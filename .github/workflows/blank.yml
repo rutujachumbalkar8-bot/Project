@@ -1,0 +1,24 @@
+name: push_workflow
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Run a success message
+        run: echo Runs successfully
+
+      - name: Current date
+        run: date
+
+      - name: Current working-directory
+        run: pwd
+        
+
+     
